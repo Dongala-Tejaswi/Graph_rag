@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+neo4j
+langchain
+sentence-transformers
+faiss-cpu
+numpy
+openai
+streamlit
+python-dotenv
+torch==2.3.1 --index-url https://download.pytorch.org/whl/cpu

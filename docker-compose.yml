@@ -1,0 +1,22 @@
+services:
+
+  neo4j:
+    image: neo4j:latest
+    container_name: neo4j
+
+    environment:
+      - NEO4J_AUTH=neo4j/password
+
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+
+  app:
+    build: .
+    container_name: graph-rag-app
+
+    ports:
+      - "8501:8501"
+
+    depends_on:
+      - neo4j
